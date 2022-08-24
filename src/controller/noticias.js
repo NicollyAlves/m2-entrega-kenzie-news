@@ -11,9 +11,12 @@ class Controller{
         ul.classList.add("listas")
         noticiasDados.forEach((noticia)=>{
             
-            const novaNoticia = new Noticia(noticia.imagem, noticia.categoria, noticia.titulo, noticia.resumo, noticia.fonte)
+            const novaNoticia = new Noticia(noticia.imagem, noticia.categoria, noticia.titulo, noticia.noticia_completa, noticia.resumo, noticia.fonte)
+            
+
             
             const cardNoticia = novaNoticia.cardNoticia()
+
 
             ul.append(cardNoticia)
         })

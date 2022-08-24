@@ -1,15 +1,14 @@
-class Requisicoes{
+class Resquisicoes {
     static base_url = "https://kenzie-news-api.herokuapp.com/api/news"
 
     static async recuperarDados(){
         const dados = await fetch(this.base_url)
-        .then((response) => response.json())
-        .then((response) => response)
-        .catch((err) => {
-            console.log(err.message);
-        })
+        .then((res) => res.json())
+        .then((res) => res)
+        .catch((err) => console.log(err.message))
+
         return dados
     }
 }
 
-export default Requisicoes
+export default Resquisicoes

@@ -1,28 +1,28 @@
-class Noticia{
-    constructor(imagem, categoria, titulo, resumo, fonte){
-        this.imagem = imagem
-        this.categoria = categoria
-        this.titulo = titulo
-        this.resumo = resumo
-        this.fonte = fonte
+class Noticia {
+    constructor(imagem, categoria, titulo, noticia_completa, resumo, fonte){
+        this.imagem           = imagem
+        this.categoria        = categoria
+        this.titulo           = titulo
+        this.noticia_completa = noticia_completa
+        this.resumo           = resumo
+        this.fonte            = fonte
     }
-    
-    cardNoticia(){
-        const noticias = document.querySelector(".noticias")
 
+    cardNoticia() {
         const li = document.createElement("li")
 
         const divImg = document.createElement("div")
         const divTextos = document.createElement("div")
         const imagem = document.createElement("img")
         const categoria = document.createElement("h4")
-        const titulo = document.createElement("h3")
+        const link = document.createElement("a")
         const resumo = document.createElement("p")
         const fonte = document.createElement("p")
 
         imagem.src = this.imagem
         categoria.innerText = this.categoria
-        titulo.innerText = this.titulo
+        link.href = this.noticia_completa
+        link.innerText = this.titulo
         resumo.innerText = this.resumo
         fonte.innerText = "Fonte: " + this.fonte
 
@@ -31,13 +31,13 @@ class Noticia{
         li.classList.add("noticia")
         imagem.classList.add("imagem")
         categoria.classList.add("categoria")
-        titulo.classList.add("titulo")
+        link.classList.add("titulo")
         resumo.classList.add("resumo")
         fonte.classList.add("fonte")
 
         li.append(divImg, divTextos)
-        divImg.append(imagem)
-        divTextos.append(categoria, titulo, resumo, fonte)
+        divImg.appendChild(imagem)
+        divTextos.append(categoria, link, resumo, fonte)
 
         return li
     }
