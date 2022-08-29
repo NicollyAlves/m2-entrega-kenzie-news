@@ -1,3 +1,6 @@
+body {
+    width: 100%;
+}
 
 .logoImagem{
     display: flex;
@@ -24,7 +27,7 @@
     margin: 20px;
     border-radius: 5px;
     transition: ease-in-out .1s;;
-    width: 98%;
+    width: 90%;
 }
 
 .noticia:hover{
@@ -147,9 +150,10 @@ a:visited{
 }
 
 @media screen and (min-width: 768px){
+    
     .logoImagem{
         display: flex;
-        width: 100%;
+        width:auto;
     }
     .listas1{
         display: flex;
@@ -157,13 +161,14 @@ a:visited{
         margin-top: 20px;
         border-radius: 5px;
         transition: ease-in-out .1s;
-        width: 100%;
+        width: 80%;
         height: 40%;
         justify-content: center;
     }
     .divTextos1{
         display: flex;
         width: 90%;
+        margin-top: 5px;
         height: 360px;
         color: #000000;
         border-radius: 8px 0 0 8px;
@@ -182,13 +187,15 @@ a:visited{
     }
     .divImg1{
         display: flex;
-        width: 500px;
+        width: 100px;
         position:absolute;
-        right: 50px;
+        left: 42%;
+    }
+    .divTextos1{
+        padding: -10%;
     }
     .titulo1{
         display: flex;
-        margin-top: -30%;
         color: #5163D3;
         margin-left: 10px;
         font-family: "Roboto+Slab:wght@700", sans-serif;
@@ -197,7 +204,7 @@ a:visited{
         line-height: 30px;
         text-decoration: none;
         width: 50%;
-        margin-top: 0%;
+        margin-top: 2%;
         margin-left: -70px;
         height: 100px;
     }
@@ -225,7 +232,7 @@ a:visited{
     }
     .noticia{
         display: flex;
-        width: 45%;
+        width: 600px;
     }
     .listas{
         display: flex;

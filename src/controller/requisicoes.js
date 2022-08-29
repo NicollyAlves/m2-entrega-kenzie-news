@@ -5,7 +5,7 @@ class Resquisicoes {
         const dados = await fetch(this.base_url)
         .then((res) => res.json())
         .then((res) => res)
-        .catch((err) => console.log(err.message))
+        .catch((err) => console.log(err))
 
         return dados
     }
